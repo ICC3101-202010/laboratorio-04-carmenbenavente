@@ -35,5 +35,13 @@ namespace Lab_4
             s = false;
             Console.WriteLine("The Computer Machine is Off");
         }
+        public void TurnOn(Machine mach)
+        {
+            mach.On();
+        }
+        public void TurnOff(Machine mach)
+        {
+            mach.Off();
+        }
     }
 }

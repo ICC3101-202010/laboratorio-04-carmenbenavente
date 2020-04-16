@@ -12,7 +12,6 @@ namespace Lab_4
         {            
             List<Machine> list = new List<Machine>();
             Computer computer = new Computer(10, false);
-            list.Add(computer);
             Reception reception = new Reception(10, false);
             list.Add(reception);
             Storage storage = new Storage(10, false);
@@ -31,9 +30,10 @@ namespace Lab_4
                 Console.WriteLine(hour + "hrs");
                 if (hour == 9)
                 {
+                    computer.On();
                     foreach (Machine j in list)
                     {
-                        j.On();
+                        computer.TurnOn(j);
                     }
                     hour += 1;
                 }
@@ -50,8 +50,9 @@ namespace Lab_4
                 {
                     foreach (Machine j in list)
                     {
-                        j.Off();
+                        computer.TurnOff(j);
                     }
+                    computer.Off();
                     hour += 1;
                 }
             }
