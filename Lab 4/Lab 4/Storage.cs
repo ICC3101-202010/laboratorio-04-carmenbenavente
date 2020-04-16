@@ -21,7 +21,7 @@ namespace Lab_4
         }
         public override List<int> Memory()
         {
-            List<int> Mem = new List<int>();
+            List<int> Mem = new List<int>(m);
             return Mem;
         }
         public override void On()
@@ -36,11 +36,7 @@ namespace Lab_4
         }
         public void Restart()
         {
-            if (Memory().Count() == m)
-            {
-                Memory().Clear();
-                Console.WriteLine("Restarting Storage");
-            }
+            Memory().Clear();
         }
     }
 }

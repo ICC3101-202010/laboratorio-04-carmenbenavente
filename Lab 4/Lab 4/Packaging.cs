@@ -21,7 +21,7 @@ namespace Lab_4
         }
         public override List<int> Memory()
         {
-            List<int> Mem = new List<int>();
+            List<int> Mem = new List<int>(m);
             return Mem;
         }
 
@@ -38,11 +38,7 @@ namespace Lab_4
         }
         public void Restart()
         {
-            if (Memory().Count() == m)
-            {
-                Memory().Clear();
-                Console.WriteLine("Restarting Packaging");
-            }
+            Memory().Clear();
         }
     }
 }

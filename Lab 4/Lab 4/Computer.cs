@@ -21,7 +21,7 @@ namespace Lab_4
         }
         public override List<int> Memory()
         {
-            List<int> Mem = new List<int>();
+            List<int> Mem = new List<int>(m);
             return Mem;
         }
 
@@ -42,6 +42,46 @@ namespace Lab_4
         public void TurnOff(Machine mach)
         {
             mach.Off();
+        }
+        public void RestartAssembly(Assembly mach)
+        {
+            if (mach.Memory().Count() == mach.Memory().Capacity)
+            {
+                mach.Restart();
+                Console.WriteLine("Restarting" +  mach);
+            }
+        }
+        public void RestartVerification(Verification mach)
+        {
+            if (mach.Memory().Count() == mach.Memory().Capacity)
+            {
+                mach.Restart();
+                Console.WriteLine("Restarting" + mach);
+            }
+        }
+        public void RestartStorage(Storage mach)
+        {
+            if (mach.Memory().Count() == mach.Memory().Capacity)
+            {
+                mach.Restart();
+                Console.WriteLine("Restarting" + mach);
+            }
+        }
+        public void RestartReception(Reception mach)
+        {
+            if (mach.Memory().Count() == mach.Memory().Capacity)
+            {
+                mach.Restart();
+                Console.WriteLine("Restarting" + mach);
+            }
+        }
+        public void RestartPackaging(Packaging mach)
+        {
+            if (mach.Memory().Count() == mach.Memory().Capacity)
+            {
+                mach.Restart();
+                Console.WriteLine("Restarting" + mach);
+            }
         }
     }
 }

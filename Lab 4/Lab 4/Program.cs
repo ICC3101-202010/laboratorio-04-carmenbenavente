@@ -39,11 +39,11 @@ namespace Lab_4
                 }
                 else if (hour < 18)
                 {
-                    reception.Restart();
-                    storage.Restart();
-                    assembly.Restart();
-                    verification.Restart();
-                    packaging.Restart();
+                    computer.RestartReception(reception);
+                    computer.RestartStorage(storage);
+                    computer.RestartAssembly(assembly);
+                    computer.RestartVerification(verification);
+                    computer.RestartPackaging(packaging);
                     hour += 1;
                 }
                 else if (hour == 18)
